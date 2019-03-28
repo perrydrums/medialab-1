@@ -2,9 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 // Page content
-import Home from './components/Home';
-import Scoreboard from './components/Scoreboard';
-import Rewards from './components/Rewards';
+import Dashboard from './components/Dashboard';
 
 // Fallback page
 import PageNotFound from './components/PageNotFound';
@@ -15,18 +13,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: Home
-    },
-    {
-      path: '/score',
-      name: 'Scoreboard',
-      component: Scoreboard
-    },
-    {
-      path: '/rewards',
-      name: 'Rewards',
-      component: Rewards
+      name: 'Dashboard',
+      component: Dashboard
     },
     {
       path: '**',
