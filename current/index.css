@@ -118,15 +118,16 @@ h1 {
 }
 
 .controls > button.active {
-    /*box-shadow: 0 0 15px 0 cyan;*/
     border-color: lightgreen;
     background-color: white;
 }
 
 .controls > button.active.blue {
-    /*box-shadow: 0 0 15px 0 cyan;*/
     border-color: cornflowerblue;
-    background-color: white;
+}
+
+.controls > button.active.red {
+    border-color: crimson;
 }
 
 /**************

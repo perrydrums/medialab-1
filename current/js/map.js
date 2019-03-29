@@ -1,4 +1,5 @@
 let map, heatMap, socialHeatMap;
+let addedMarkers = [];
 const center = {lat: 51.9173738, lng: 4.4845588};
 
 // Called by Google Maps API.
@@ -116,6 +117,11 @@ function initMap() {
 
   document.getElementById('heatMapToggle').classList.toggle('active');
   document.getElementById('socialHeatMapToggle').classList.toggle('active');
+  document.getElementById('markersToggle').classList.toggle('active');
+
+  addMarkers(mentionPoints);
+  toggleSocialHeatmap();
+  toggleMarkers();
 
   changeGradient();
 }
@@ -127,6 +133,22 @@ function formatPoints(p) {
   });
 
   return heatMapPoints;
+}
+
+function addMarkers(markers) {
+  markers.forEach(marker => {
+    addedMarkers.push(new google.maps.Marker({
+      position: {lat: marker[1], lng: marker[0]},
+      map: map,
+    }));
+  })
+}
+
+function toggleMarkers() {
+  addedMarkers.forEach(marker => {
+    marker.setVisible(!marker.getVisible());
+  });
+  document.getElementById('markersToggle').classList.toggle('active');
 }
 
 function toggleHeatmap() {
