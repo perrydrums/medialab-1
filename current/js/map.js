@@ -1,4 +1,4 @@
-let map, heatMap;
+let map, heatMap, socialHeatMap;
 const center = {lat: 51.9173738, lng: 4.4845588};
 
 // Called by Google Maps API.
@@ -100,16 +100,26 @@ function initMap() {
   });
 
   heatMap = new google.maps.visualization.HeatmapLayer({
-    data: getPoints(),
-    map: map
+    data: formatPoints(points),
+    map: map,
+    opacity: 0.5
   });
 
-  heatMap.set('radius', 30);
+  socialHeatMap = new google.maps.visualization.HeatmapLayer({
+    data: formatPoints(socialPoints),
+    map: map,
+    opacity: 0.5
+  });
+
+  heatMap.set('radius', 20);
+  socialHeatMap.set('radius', 20);
+
+  changeGradient();
 }
 
-function getPoints() {
+function formatPoints(p) {
   let heatMapPoints = [];
-  points.forEach(point => {
+  p.forEach(point => {
     heatMapPoints.push(new google.maps.LatLng({lat: point[1], lng: point[0]}));
   });
 
@@ -118,6 +128,10 @@ function getPoints() {
 
 function toggleHeatmap() {
   heatMap.setMap(heatMap.getMap() ? null : map);
+}
+
+function toggleSocialHeatmap() {
+  socialHeatMap.setMap(socialHeatMap.getMap() ? null : map);
 }
 
 function changeGradient() {
@@ -137,5 +151,5 @@ function changeGradient() {
     'rgba(191, 0, 31, 1)',
     'rgba(255, 0, 0, 1)'
   ];
-  heatMap.set('gradient', heatMap.get('gradient') ? null : gradient);
+  socialHeatMap.set('gradient', socialHeatMap.get('gradient') ? null : gradient);
 }
