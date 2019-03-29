@@ -365,16 +365,37 @@ const socialPoints = [
 ];
 
 const mentionPoints = [
-  [
-    4.4940948486328125,
-    51.89386778172307
-  ],
-  [
-    4.466800689697266,
-    51.914944038342156
-  ],
-  [
-    4.467487335205078,
-    51.90446010157102
-  ]
+  {
+    location: [
+      4.4940948486328125,
+      51.89386778172307
+    ],
+    data: {
+      title: 'Bloemhof 127',
+      description: 'Anoniem: Overal ligt zwerfafval! Hier moet onmiddelijk wat aan gedaan worden!',
+      time: 'Zaterdag 3 oktober'
+    }
+  },
+  {
+    location: [
+      4.466800689697266,
+      51.914944038342156
+    ],
+    data: {
+      title: 'Middelland 27',
+      description: 'Anoniem: De buurt is erg smerig. Er liggen zakken afval voor mijn deur.',
+      time: 'Maandag 17 maart'
+    }
+  },
+  {
+    location: [
+      4.467487335205078,
+      51.90446010157102
+    ],
+    data: {
+      title: 'Nieuwe Werk Parklaan 33a',
+      description: 'Jantine: De vuilnisbak in mijn straat is kapot en er waait constant afval uit op straat.',
+      time: 'Dinsdag 28 mei'
+    }
+  },
 ];

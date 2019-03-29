@@ -119,7 +119,7 @@ function initMap() {
   document.getElementById('socialHeatMapToggle').classList.toggle('active');
   document.getElementById('markersToggle').classList.toggle('active');
 
-  addMarkers(mentionPoints);
+  addMarkers();
   toggleSocialHeatmap();
   toggleMarkers();
 
@@ -135,12 +135,27 @@ function formatPoints(p) {
   return heatMapPoints;
 }
 
-function addMarkers(markers) {
-  markers.forEach(marker => {
-    addedMarkers.push(new google.maps.Marker({
-      position: {lat: marker[1], lng: marker[0]},
+function addMarkers() {
+  mentionPoints.forEach(marker => {
+    let m = new google.maps.Marker({
+      position: {lat: marker.location[1], lng: marker.location[0]},
       map: map,
-    }));
+      customInfo: marker.data,
+    });
+
+    // Show the maker info in the sidebar.
+    m.addListener('click', function() {
+      const info = this.customInfo;
+      const sidebar = document.getElementById('sidebar');
+      sidebar.innerHTML = `
+        <h1>${info.title}</h1>
+        <h3>${info.time}</h3>
+        <br><br>
+        <p>${info.description}</p>
+      `;
+    });
+
+    addedMarkers.push(m);
   })
 }
 
