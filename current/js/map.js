@@ -114,6 +114,9 @@ function initMap() {
   heatMap.set('radius', 20);
   socialHeatMap.set('radius', 20);
 
+  document.getElementById('heatMapToggle').classList.toggle('active');
+  document.getElementById('socialHeatMapToggle').classList.toggle('active');
+
   changeGradient();
 }
 
@@ -128,28 +131,26 @@ function formatPoints(p) {
 
 function toggleHeatmap() {
   heatMap.setMap(heatMap.getMap() ? null : map);
+  document.getElementById('heatMapToggle').classList.toggle('active');
 }
 
 function toggleSocialHeatmap() {
   socialHeatMap.setMap(socialHeatMap.getMap() ? null : map);
+  document.getElementById('socialHeatMapToggle').classList.toggle('active');
 }
 
 function changeGradient() {
   const gradient = [
-    'rgba(0, 255, 255, 0)',
-    'rgba(0, 255, 255, 1)',
-    'rgba(0, 191, 255, 1)',
-    'rgba(0, 127, 255, 1)',
-    'rgba(0, 63, 255, 1)',
-    'rgba(0, 0, 255, 1)',
-    'rgba(0, 0, 223, 1)',
-    'rgba(0, 0, 191, 1)',
-    'rgba(0, 0, 159, 1)',
-    'rgba(0, 0, 127, 1)',
-    'rgba(63, 0, 91, 1)',
-    'rgba(127, 0, 63, 1)',
-    'rgba(191, 0, 31, 1)',
-    'rgba(255, 0, 0, 1)'
+    "rgba(12, 2, 255, 0)",
+    "rgba(0, 244, 255, 1)",
+    "rgba(0, 156, 255, 1)",
+    "rgba(0, 75, 255, 1)",
+    "rgba(12, 2, 255, 1)",
+    "rgba(12, 2, 255, 1)",
+    "rgba(102, 44, 249, 1)",
+    "rgba(155, 58, 249, 1)",
+    "rgba(205, 0, 255, 1)",
+    "rgba(255, 133, 225, 1)"
   ];
   socialHeatMap.set('gradient', socialHeatMap.get('gradient') ? null : gradient);
 }
