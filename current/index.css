@@ -12,8 +12,21 @@ body {
     font-family: MuseoSans;
 }
 
+@font-face {
+    src: url("font/Biryani.ttf");
+    font-family: Biryani;
+}
+
 h1 {
-    font-weight: normal;
+    font-size: 50px;
+    font-family: Biryani, serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+h2 {
+    font-weight: lighter;
+    margin-bottom: 10px;
 }
 
 .header {
@@ -22,8 +35,6 @@ h1 {
 
 .logo {
     padding: 20px;
-    font-size: 50px;
-    font-family: MuseoSans, serif;
 }
 
 #content {
@@ -45,26 +56,59 @@ h1 {
 .sidebar-container {
     grid-area: Sidebar;
     padding: 20px;
+    overflow-y: scroll;
 }
 
 #map {
     width: 100%;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 5px;
     box-shadow: 0 4px 7px 0 rgba(170,170,170,1);
+}
+
+.map-title {
+    position: absolute;
+    right: 0; top: 0;
+    padding: 38px;
+    font-family: Biryani, sans-serif;
+    text-transform: uppercase;
 }
 
 #sidebar {
     width: 100%;
     height: 100%;
-    border-radius: 20px;
-    background-color: white;
+    border-radius: 5px;
+    background-color: darkslategray;
     box-shadow: 0 4px 7px 0 rgba(170,170,170,1);
 
     box-sizing: border-box;
     padding: 20px;
 
-    font-family: MuseoSans, serif;
+    font-family: Biryani, sans-serif;
+    color: white;
+    text-transform: uppercase;
+
+    overflow-y: scroll;
+}
+
+#sidebar > div {
+    margin-bottom: 50px;
+}
+
+.district-image {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
+}
+
+.message {
+    background-color: white;
+    color: black;
+    text-transform: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
 }
 
 .controls {

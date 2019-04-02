@@ -10,11 +10,14 @@
 <body>
 <div id="app">
   <div class="header">
-    <div class="logo">Okolis</div>
+    <div class="logo"><h1>Okolis</h1></div>
   </div>
   <div id="content">
     <div class="map-container" >
       <div id="map"></div>
+      <div class="map-title">
+        <h2>Rotterdam</h2>
+      </div>
       <div class="controls">
         <button onclick="toggleHeatmap()" id="heatMapToggle">
           <img src="icons/satellite.svg" style="width: 100%; height: 100%;" />
@@ -29,7 +32,29 @@
     </div>
     <div class="sidebar-container">
       <div id="sidebar">
-        <h1>Info</h1>
+        <div>
+          <h2>Wijkoverzicht</h2>
+          <img class="district-image" src="./icons/placeholder.gif" alt="" style="max-width: 100%">
+        </div>
+        <div>
+          <h2>Sentiment</h2>
+          <div class="sentiment">grafiek hier</div>
+        </div>
+        <div>
+          <h2>Berichten</h2>
+          <div class="message">
+            <p>hello</p>
+          </div>
+          <div class="message">
+            <p>hello</p>
+          </div>
+          <div class="message">
+            <p>hello</p>
+          </div>
+          <div class="message">
+            <p>hello</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
