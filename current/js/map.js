@@ -140,19 +140,27 @@ function addMarkers() {
     let m = new google.maps.Marker({
       position: {lat: marker.location[1], lng: marker.location[0]},
       map: map,
-      customInfo: marker.data,
+      icon: {
+        url: "../icons/warning.svg",
+        anchor: new google.maps.Point(25,50),
+        scaledSize: new google.maps.Size(50,50)
+      },
+    });
+
+    let content = `  
+      <h2>${marker.data.title}</h2>
+      <h3>${marker.data.time}</h3>
+      <br><br>
+      <p>${marker.data.description}</p>
+    `;
+
+    let infoWindow = new google.maps.InfoWindow({
+      content: content,
     });
 
     // Show the maker info in the sidebar.
     m.addListener('click', function() {
-      const info = this.customInfo;
-      const sidebar = document.getElementById('sidebar');
-      sidebar.innerHTML = `
-        <h1>${info.title}</h1>
-        <h3>${info.time}</h3>
-        <br><br>
-        <p>${info.description}</p>
-      `;
+      infoWindow.open(map, m);
     });
 
     addedMarkers.push(m);
