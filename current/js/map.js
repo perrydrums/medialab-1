@@ -147,11 +147,32 @@ function addMarkers() {
       },
     });
 
-    let content = `  
-      <h2>${marker.data.title}</h2>
-      <h3>${marker.data.time}</h3>
-      <br><br>
-      <p>${marker.data.description}</p>
+    let messages = '';
+    marker.data.messages.forEach(message => {
+      messages += `
+        <div class="message">
+          <div class="message-photo-container">
+            <img class="message-photo" src="${message.photo}" />
+          </div>
+          <div class="message-text">${message.message}</div>
+        </div>
+      `;
+    });
+
+    let content = ` 
+      <div class="info-window">
+        <div class="iw-title">
+          <h2>${marker.data.title}</h2>
+          <h3>Hoge indicatie: <span style="text-transform: uppercase; font-weight: bolder">${marker.data.indication}</span></h3>
+        </div>
+        <div class="iw-button">
+          <button>ICON</button>
+        </div>
+        <div class="iw-messages">
+          <h3>Social Media</h3>
+          ${messages}
+        </div>
+      </div> 
     `;
 
     let infoWindow = new google.maps.InfoWindow({

@@ -27,6 +27,11 @@ h1 {
 h2 {
     font-weight: lighter;
     margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-weight: lighter;
 }
 
 .map-title > h2 {
@@ -77,6 +82,44 @@ h2 {
     font-family: Biryani, sans-serif;
     text-transform: uppercase;
 }
+
+.info-window {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "IW-Title IW-Button"
+                         "IW-Messages IW-Messages";
+
+    overflow-y: scroll;
+    max-height: 250px;
+    max-width: 550px;
+}
+
+.iw-title {
+    grid-area: IW-Title;
+    margin-bottom: 30px;
+}
+
+.iw-button {
+    grid-area: IW-Button;
+    box-sizing: border-box;
+    padding-right: 10px;
+}
+
+.iw-button > button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: right;
+    outline: none;
+    border: 2px solid lightgreen;
+    background-color: white;
+}
+
+.iw-messages {
+    grid-area: IW-Messages;
+}
+
 
 #sidebar {
     width: 100%;

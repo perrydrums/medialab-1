@@ -371,9 +371,14 @@ const mentionPoints = [
       51.89386778172307
     ],
     data: {
-      title: 'Bloemhof 127',
-      description: 'Anoniem: Overal ligt zwerfafval! Hier moet onmiddelijk wat aan gedaan worden!',
-      time: 'Zaterdag 3 oktober'
+      title: 'Cool district',
+      indication: 'zwerfafval',
+      messages: [
+        {
+          photo: '/icons/placeholder.gif',
+          message: '',
+        }
+      ]
     }
   },
   {
@@ -382,9 +387,22 @@ const mentionPoints = [
       51.914944038342156
     ],
     data: {
-      title: 'Middelland 27',
-      description: 'Anoniem: De buurt is erg smerig. Er liggen zakken afval voor mijn deur.',
-      time: 'Maandag 17 maart'
+      title: 'Cool district',
+      indication: 'zwerfafval',
+      messages: [
+        {
+          photo: '/icons/placeholder.gif',
+          message: 'OVERAL AFVAL! IEEEEEEUUUUUUWWWWWWWWW!!! 🤮🤮🤮🤮🤮🤮',
+        },
+        {
+          photo: '/icons/placeholder.gif',
+          message: 'OVERAL AFVAL! IEEEEEEUUUUUUWWWWWWWWW!!! 🤮🤮🤮🤮🤮🤮',
+        },
+        {
+          photo: '/icons/placeholder.gif',
+          message: 'OVERAL AFVAL! IEEEEEEUUUUUUWWWWWWWWW!!! 🤮🤮🤮🤮🤮🤮',
+        },
+      ]
     }
   },
   {
@@ -393,9 +411,14 @@ const mentionPoints = [
       51.90446010157102
     ],
     data: {
-      title: 'Nieuwe Werk Parklaan 33a',
-      description: 'Jantine: De vuilnisbak in mijn straat is kapot en er waait constant afval uit op straat.',
-      time: 'Dinsdag 28 mei'
+      title: 'Cool district',
+      indication: 'zwerfafval',
+      messages: [
+        {
+          photo: '/icons/placeholder.gif',
+          message: '',
+        }
+      ]
     }
   },
 ];
