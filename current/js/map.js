@@ -147,18 +147,6 @@ function addMarkers() {
       },
     });
 
-    let messages = '';
-    marker.data.messages.forEach(message => {
-      messages += `
-        <div class="message">
-          <div class="message-photo-container">
-            <img class="message-photo" src="${message.photo}" />
-          </div>
-          <div class="message-text">${message.message}</div>
-        </div>
-      `;
-    });
-
     let content = ` 
       <div class="info-window">
         <div class="iw-title">
@@ -169,8 +157,20 @@ function addMarkers() {
           <button>ICON</button>
         </div>
         <div class="iw-messages">
-          <h3>Social Media</h3>
-          ${messages}
+          <table>
+            <tr>
+              <td width="80%">Satelliet afval indicatie</td>
+              <td width="20%" style="text-align: right">${marker.data.satellite}</td>
+            </tr>
+            <tr>
+              <td>Negatieve berichten</td>
+              <td style="text-align: right">${marker.data.negative}</td>
+            </tr>
+            <tr>
+              <td>Positieve berichten</td>
+              <td style="text-align: right">${marker.data.positive}</td>
+            </tr>
+          </table>
         </div>
       </div> 
     `;

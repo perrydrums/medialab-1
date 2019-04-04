@@ -371,14 +371,11 @@ const mentionPoints = [
       51.89386778172307
     ],
     data: {
-      title: 'Cool district',
+      title: 'Tarwewijk',
       indication: 'zwerfafval',
-      messages: [
-        {
-          photo: '/icons/placeholder.gif',
-          message: '',
-        }
-      ]
+      satellite: '89%',
+      positive: 0,
+      negative: 18,
     }
   },
   {
@@ -389,20 +386,9 @@ const mentionPoints = [
     data: {
       title: 'Cool district',
       indication: 'zwerfafval',
-      messages: [
-        {
-          photo: '/icons/placeholder.gif',
-          message: 'OVERAL AFVAL! IEEEEEEUUUUUUWWWWWWWWW!!! 🤮🤮🤮🤮🤮🤮',
-        },
-        {
-          photo: '/icons/placeholder.gif',
-          message: 'OVERAL AFVAL! IEEEEEEUUUUUUWWWWWWWWW!!! 🤮🤮🤮🤮🤮🤮',
-        },
-        {
-          photo: '/icons/placeholder.gif',
-          message: 'OVERAL AFVAL! IEEEEEEUUUUUUWWWWWWWWW!!! 🤮🤮🤮🤮🤮🤮',
-        },
-      ]
+      satellite: '95,6%',
+      positive: 2,
+      negative: 9,
     }
   },
   {
@@ -411,14 +397,11 @@ const mentionPoints = [
       51.90446010157102
     ],
     data: {
-      title: 'Cool district',
+      title: 'Nieuwe Werk',
       indication: 'zwerfafval',
-      messages: [
-        {
-          photo: '/icons/placeholder.gif',
-          message: '',
-        }
-      ]
+      satellite: '88,0%',
+      positive: 4,
+      negative: 8,
     }
   },
 ];
