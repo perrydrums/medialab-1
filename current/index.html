@@ -10,7 +10,7 @@
 <body>
 <div id="app">
   <div class="header">
-    <div class="logo"><h1>Okolis</h1></div>
+    <div class="logo"><img class="logo-image" src="./icons/gemeente-rotterdam.jpeg" alt=""></div>
   </div>
   <div id="content">
     <div class="map-container" >
@@ -28,6 +28,9 @@
         <button onclick="toggleMarkers()" id="markersToggle" class="red">
           <img src="icons/danger.svg" />
         </button>
+        <button>
+          <img class="trash-icon" onclick="requestPickup()" src="./icons/trash.svg" alt="">
+        </button>
       </div>
     </div>
     <div class="sidebar-container">
@@ -39,30 +42,44 @@
         <div>
           <h2>Sentiment</h2>
           <div class="sentiment">
-            <img class="district-image" src="./icons/placeholder-graph.jpg" alt="" style="max-width: 100%">
+            <img class="district-image" src="./icons/graph.jpeg" alt="" style="width: 100%">
           </div>
         </div>
         <div>
           <h2>Social Media</h2>
-          <div class="message">
-            <div class="message-photo-container">
-              <img class="message-photo" src="icons/person-1.jpeg" />
+          <div class="social-media">
+            <div class="message">
+              <div class="message-photo-container">
+                <img class="message-photo" src="icons/person-1.jpeg" />
+              </div>
+              <div class="message-text">Er ligt overal afval in mijn voortuin! Dit is onacceptabel! #bah #middelland</div>
+              <div class="message-location">
+                <img src="./icons/location.png" alt="">
+                Middelland
+              </div>
             </div>
-            <div class="message-text">Er ligt overal afval in mijn voortuin! Dit is onacceptabel! #bah #middelland</div>
-          </div>
 
-          <div class="message">
-            <div class="message-photo-container">
-              <img class="message-photo" src="icons/person-1.jpeg" />
+            <div class="message">
+              <div class="message-photo-container">
+                <img class="message-photo" src="icons/person-2.jpeg" />
+              </div>
+              <div class="message-text">OVERAL AFVAL! IEEEEEEUUUUUUWWWWWWWWW!!! 🤮🤮🤮🤮🤮🤮</div>
+              <div class="message-location">
+                <img src="./icons/location.png" alt="">
+                Overschie
+              </div>
             </div>
-            <div class="message-text">OVERAL AFVAL! IEEEEEEUUUUUUWWWWWWWWW!!! 🤮🤮🤮🤮🤮🤮</div>
-          </div>
 
-          <div class="message">
-            <div class="message-photo-container">
-              <img class="message-photo" src="icons/person-1.jpeg" />
+            <div class="message">
+              <div class="message-photo-container">
+                <img class="message-photo" src="icons/person-1.jpeg" />
+              </div>
+              <div class="message-text">De container is ALTIJD vol! Leeg deze is wat vaker! Al het afval waait weg #overschie </div>
+              <div class="message-location">
+                <img src="./icons/location.png" alt="">
+                Overschie
+              </div>
             </div>
-            <div class="message-text">De container is ALTIJD vol! Leeg deze is wat vaker! Al het afval waait weg #overschie </div>
           </div>
         </div>
       </div>

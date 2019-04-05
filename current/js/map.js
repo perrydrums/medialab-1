@@ -153,9 +153,6 @@ function addMarkers() {
           <h2>${marker.data.title}</h2>
           <h3>Hoge indicatie: <span style="text-transform: uppercase; font-weight: bolder">${marker.data.indication}</span></h3>
         </div>
-        <div class="iw-button">
-          <button><img class="truck-icon" onclick="requestPickup()" src="../icons/garbage-truck.svg" alt=""></button>
-        </div>
         <div class="iw-messages">
           <table>
             <tr>

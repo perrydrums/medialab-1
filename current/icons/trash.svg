@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="396px" height="432px" viewBox="0 0 396 432" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Panel" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" stroke="#000000" stroke-width="23">
+            <rect id="Rectangle" x="11.5" y="54.5" width="373" height="48" rx="24"></rect>
+            <path d="M34.3350624,105.5 L63.7887231,398.371161 C65.0219971,410.634165 75.3434051,419.969627 87.6682674,419.969627 L299.356862,419.969627 C311.438853,419.969627 321.637249,410.988244 323.164376,399.003154 L360.562218,105.5 L34.3350624,105.5 Z" id="Rectangle-Copy-15"></path>
+            <path d="M115.5,154.5 L129.5,369.5" id="Line-2" stroke-linecap="round"></path>
+            <path d="M200.5,154 L200.5,370" id="Line-2-Copy" stroke-linecap="round"></path>
+            <path d="M275,154 L262,370" id="Line-2-Copy-2" stroke-linecap="round"></path>
+            <path d="M113.5,51.5 L274.5,51.5 L274.5,30 C274.5,19.7827321 266.217268,11.5 256,11.5 L132,11.5 C121.782732,11.5 113.5,19.7827321 113.5,30 L113.5,51.5 Z" id="Rectangle"></path>
+        </g>
+    </g>
+</svg>
