@@ -116,6 +116,12 @@ h3 {
     background-color: white;
 }
 
+.truck-icon {
+    width: 80%;
+    padding-top: 3px;
+    padding-left: 2px;
+}
+
 .iw-messages {
     grid-area: IW-Messages;
 }

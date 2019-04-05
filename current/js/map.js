@@ -154,7 +154,7 @@ function addMarkers() {
           <h3>Hoge indicatie: <span style="text-transform: uppercase; font-weight: bolder">${marker.data.indication}</span></h3>
         </div>
         <div class="iw-button">
-          <button>ICON</button>
+          <button><img class="truck-icon" onclick="requestPickup()" src="../icons/garbage-truck.svg" alt=""></button>
         </div>
         <div class="iw-messages">
           <table>
@@ -186,6 +186,12 @@ function addMarkers() {
 
     addedMarkers.push(m);
   })
+}
+
+function requestPickup() {
+  if (confirm('Weet je zeker dat je een opruimteam naar deze locatie wilt sturen?')) {
+    alert('Het opruimteam is ingelicht!');
+  }
 }
 
 function toggleMarkers() {

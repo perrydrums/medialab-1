@@ -517,17 +517,4 @@ const mentionPoints = [
       negative: 9,
     }
   },
-  {
-    location: [
-      4.467487335205078,
-      51.90446010157102
-    ],
-    data: {
-      title: 'Nieuwe Werk',
-      indication: 'zwerfafval',
-      satellite: '88,0%',
-      positive: 4,
-      negative: 8,
-    }
-  },
 ];
