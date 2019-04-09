@@ -8,11 +8,6 @@ body {
 }
 
 @font-face {
-    src: url("font/MuseoSans.otf");
-    font-family: MuseoSans;
-}
-
-@font-face {
     src: url("font/Biryani.ttf");
     font-family: Biryani;
 }
