@@ -146,11 +146,10 @@ function sendCleanupCrew(location) {
         scaledSize: new google.maps.Size(50,50)
       },
     });
-
-    google.maps.event.clearListeners(map, 'click');
-    document.getElementById('trashToggle').classList.toggle('active');
-    map.setOptions({draggableCursor:''});
   }
+  google.maps.event.clearListeners(map, 'click');
+  document.getElementById('trashToggle').classList.toggle('active');
+  map.setOptions({draggableCursor:''});
 }
 
 function formatPoints(p) {
