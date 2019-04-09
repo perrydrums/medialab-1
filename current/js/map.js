@@ -232,13 +232,7 @@ function toggleSocialHeatmap() {
 function changeGradient() {
   const gradient = [
     "rgba(12, 2, 255, 0)",
-    "rgba(0, 244, 255, 1)",
-    "rgba(0, 156, 255, 1)",
-    "rgba(0, 75, 255, 1)",
     "rgba(12, 2, 255, 1)",
-    "rgba(12, 2, 255, 1)",
-    "rgba(102, 44, 249, 1)",
-    "rgba(155, 58, 249, 1)",
     "rgba(205, 0, 255, 1)",
     "rgba(255, 133, 225, 1)"
   ];
