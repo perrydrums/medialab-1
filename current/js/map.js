@@ -103,13 +103,13 @@ function initMap() {
   heatMap = new google.maps.visualization.HeatmapLayer({
     data: formatPoints(points),
     map: map,
-    opacity: 0.5
+    opacity: .7
   });
 
   socialHeatMap = new google.maps.visualization.HeatmapLayer({
     data: formatPoints(socialPoints),
     map: map,
-    opacity: 0.5
+    opacity: .7
   });
 
   heatMap.set('radius', 20);
