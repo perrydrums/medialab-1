@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="396px" height="432px" viewBox="0 0 396 432" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>trash</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="trash" transform="translate(11.000000, 11.000000)" stroke="#FFFFFF" stroke-width="23">
+            <rect id="Rectangle" x="0.5" y="43.5" width="373" height="48" rx="24"></rect>
+            <path d="M23.3350624,94.5 L52.7887231,387.371161 C54.0219971,399.634165 64.3434051,408.969627 76.6682674,408.969627 L288.356862,408.969627 C300.438853,408.969627 310.637249,399.988244 312.164376,388.003154 L349.562218,94.5 L23.3350624,94.5 Z" id="Rectangle-Copy-15"></path>
+            <path d="M104.5,143.5 L118.5,358.5" id="Line-2" stroke-linecap="round"></path>
+            <path d="M189.5,143 L189.5,359" id="Line-2-Copy" stroke-linecap="round"></path>
+            <path d="M264,143 L251,359" id="Line-2-Copy-2" stroke-linecap="round"></path>
+            <path d="M102.5,40.5 L263.5,40.5 L263.5,19 C263.5,8.7827321 255.217268,0.5 245,0.5 L121,0.5 C110.782732,0.5 102.5,8.7827321 102.5,19 L102.5,40.5 Z" id="Rectangle"></path>
+        </g>
+    </g>
+</svg>
