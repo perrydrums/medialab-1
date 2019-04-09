@@ -1,4 +1,4 @@
-let map, heatMap, socialHeatMap;
+let map, heatMap, socialHeatMap, clickEvent;
 let addedMarkers = [];
 const center = {lat: 51.9173738, lng: 4.4845588};
 
@@ -126,6 +126,33 @@ function initMap() {
   changeGradient();
 }
 
+function listenToClickEvent () {
+  clickEvent = google.maps.event.addListener(map, 'click', function(event) {
+    sendCleanupCrew(event.latLng);
+  });
+  document.getElementById('trashToggle').classList.toggle('active');
+  map.setOptions({draggableCursor:'url(../icons/cursor.png), auto'});
+}
+
+function sendCleanupCrew(location) {
+  console.log('location', location.lat);
+  if (confirm('Wil je een opruimteam sturen naar locatie?')) {
+    new google.maps.Marker({
+      position: location,
+      map: map,
+      icon: {
+        url: "../icons/trash-pinpoint.svg",
+        anchor: new google.maps.Point(20,0),
+        scaledSize: new google.maps.Size(50,50)
+      },
+    });
+
+    google.maps.event.clearListeners(map, 'click');
+    document.getElementById('trashToggle').classList.toggle('active');
+    map.setOptions({draggableCursor:''});
+  }
+}
+
 function formatPoints(p) {
   let heatMapPoints = [];
   p.forEach(point => {
@@ -185,12 +212,6 @@ function addMarkers() {
   })
 }
 
-function requestPickup() {
-  if (confirm('Weet je zeker dat je een opruimteam naar deze locatie wilt sturen?')) {
-    alert('Het opruimteam is ingelicht!');
-  }
-}
-
 function toggleMarkers() {
   addedMarkers.forEach(marker => {
     marker.setVisible(!marker.getVisible());
@@ -222,4 +243,15 @@ function changeGradient() {
     "rgba(255, 133, 225, 1)"
   ];
   socialHeatMap.set('gradient', socialHeatMap.get('gradient') ? null : gradient);
+
+  const gradientSatellite = [
+    "rgba(102, 255, 0, 0)",
+    "rgba(249, 198, 0, 1)",
+    "rgba(255, 170, 0, 1)",
+    "rgba(255, 113, 0, 1)",
+    "rgba(255, 57, 0, 1)",
+    "rgba(255, 0, 0, 1)"
+  ];
+
+  heatMap.set('gradient', heatMap.get('gradient') ? null : gradientSatellite);
 }
